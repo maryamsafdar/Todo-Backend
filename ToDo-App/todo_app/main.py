@@ -90,7 +90,7 @@ async def login(email: str , password: str, session: Session = Depends(get_sessi
         raise HTTPException(status_code=404, detail="User not found")
     if user.password != password:
         raise HTTPException(status_code=401, detail="Incorrect password")
-    return {"message": "Login successful", "user":user}
+    return {"message": "Login successful", "user":user.id}
 
 
 @app.post('/signup/')
