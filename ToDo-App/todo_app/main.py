@@ -72,7 +72,7 @@ async def lifespan(app: FastAPI):
 
 
 app: FastAPI = FastAPI(
-    lifespan=lifespan, title="dailyDo Todo App", version='1.0.0')
+    lifespan=lifespan, title="ToDo App", version='1.0.0')
 
 
 @app.get('/')
