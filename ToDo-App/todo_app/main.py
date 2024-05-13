@@ -77,7 +77,7 @@ app: FastAPI = FastAPI(
 
 @app.get('/')
 async def root():
-    return {"message": "Welcome to dailyDo todo app"}
+    return {"message": "Welcome to ToDo App"}
 
 
 @app.get('/login/')
