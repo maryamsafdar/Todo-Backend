@@ -3,8 +3,7 @@ from sqlmodel import SQLModel, Field, create_engine, Session, select, Relationsh
 from todo_app import setting
 from typing import Annotated, Optional
 from contextlib import asynccontextmanager
-from dotenv import load_dotenv, find_dotenv
-from os import getenv
+
 
 # Step-1: Create Database on Neon
 # Step-2: Create .env file for environment variables
