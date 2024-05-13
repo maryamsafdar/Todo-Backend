@@ -81,7 +81,7 @@ async def root():
 
 
 @app.get('/login/')
-async def login(email: str = Query(...), password: str = Query(...), session: Session = Depends(get_session)):
+async def login(email: str , password: str, session: Session = Depends(get_session)):
     if not email or not password:
         raise HTTPException(status_code=400, detail="Missing email or password")
     user = session.exec(select(User).where(User.email == email)).first()
